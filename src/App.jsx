@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom'
+import { HashRouter, Route, Routes, useParams } from 'react-router-dom'
 import { articles } from './data/siteData'
 import About from './pages/About'
 import ArticlePage from './pages/ArticlePage'
@@ -13,7 +13,7 @@ function ArticleRoute() {
 }
 
 export default function App() {
-  return <BrowserRouter>
+  return <HashRouter>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/blog" element={<Blog />} />
@@ -21,5 +21,5 @@ export default function App() {
       <Route path="/about" element={<About />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 }
