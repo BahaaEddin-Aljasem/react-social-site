@@ -1,0 +1,11 @@
+@import url('./variables.css');
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+
+:root { font-family: 'Tajawal', Arial, sans-serif; color: #f9f6f1; background: #101111; font-synthesis: none; text-rendering: optimizeLegibility; }
+h1,h2,h3,p { margin-top:0; }
+.button { padding:14px 23px; font-size:15px; border:1px solid transparent; }
+.primary { color:white; background:var(--orange); }
+.primary:hover,.reading-link:hover { background:#ff7d28; transform:translateY(-2px); }
+.secondary { color:#eee; border-color:rgba(255,255,255,.2); }
+.secondary:hover { background:#fff; color:#141414; }

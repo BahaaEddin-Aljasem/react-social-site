@@ -1,0 +1,58 @@
+.site-header { height: 80px; border-bottom: 1px solid #262626; background: rgba(10,10,10,.95); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(24px); }
+.nav-shell { max-width: 1280px; height: 100%; padding: 0 24px; margin: auto; display:flex; justify-content:space-between; align-items:center; gap:32px; }
+.logo { display:inline-flex; align-items:center; gap:10px; min-width:max-content; line-height:1; }
+.logo-mark { display:grid; place-items:center; width:48px; height:48px; }
+.logo-mark img { width:42px; height:42px; }
+.logo b { font-size:20px; font-weight:700; color:#fff; display:block; }
+.logo small { display:block; color:rgba(251,146,60,.8); font-size:12px; letter-spacing:.025em; margin-top:2px; }
+.main-nav { display:flex; padding:6px; border:1px solid #262626; background:#161616; border-radius:999px; gap:4px; }
+.main-nav a { color:#a3a3a3; padding:10px 20px; font-size:14px; font-weight:500; border-radius:99px; transition:.3s; }
+.main-nav a:hover { color:#fff; }
+.main-nav a.active { color:#fff; background:linear-gradient(to right,#f97316,#ea580c); }
+.header-actions { display:flex; align-items:center; gap:12px; }
+.icon-button,.mobile-toggle { border:1px solid transparent; color:#737373; background:transparent; display:grid; place-items:center; cursor:pointer; padding:12px; border-radius:12px; transition:.3s; }
+.icon-button:hover { color:var(--orange); background:#161616; border-color:#262626; }
+.reading-link,.button { display:inline-flex; gap:9px; align-items:center; justify-content:center; border-radius:999px; font-weight:700; transition:.2s; }
+.reading-link { background:var(--orange); padding:13px 21px; font-size:14px; }
+.header-actions .reading-link { color:#fff; transition:transform 180ms ease,background-color 180ms ease; }
+.header-actions .reading-link:hover { background:#df5f0d; transform:translateY(-3px); }
+.reading-link svg,.primary svg,.text-link svg { transform:rotate(180deg); }
+.mobile-toggle { display:none; }
+.mobile-reading-link { display:none; color:#fff; transition:transform 180ms ease,background-color 180ms ease; }
+.main-nav .mobile-reading-link:hover { background:#df5f0d; color:#fff; transform:translateY(-2px); }
+.footer-brand .logo { min-height:44px; }
+.footer-brand .logo small { display:none; }
+.footer-brand .logo-mark { width:40px; height:40px; border-radius:12px; }
+
+@media (min-width:761px) and (max-width:900px) {
+  .site-header { height:96px; }
+  .nav-shell { padding:0 32px; }
+  .main-nav { display:none; position:absolute; top:100%; right:18px; left:18px; padding:20px; border:1px solid #262626; border-radius:24px; background:#161616; flex-direction:column; gap:8px; }
+  .main-nav.open { display:flex; }
+  .main-nav a { padding:18px 20px; border:1px solid transparent; text-align:right; }
+  .main-nav a.active { border-color:#8b450e; background:#321d0f; color:#f97316; }
+  .main-nav a:not(.active):hover { background:#1d1d1d; }
+  .icon-button,.reading-link { display:none; }
+  .mobile-toggle { display:grid; }
+  .mobile-reading-link { display:flex; align-items:center; justify-content:center; height:64px; margin-top:16px; border-radius:999px; background:#f97316; color:#fff; font-size:18px; font-weight:700; }
+}
+
+@media (max-width:760px) {
+  .site-header { height:75px; }
+  .nav-shell { padding:0 18px; }
+  .logo b { font-size:21px; }
+  .logo small { display:none; }
+  .logo-mark { width:36px; height:36px; }
+  .main-nav { display:none; position:absolute; top:100%; right:18px; left:18px; padding:20px; border:1px solid #262626; border-radius:24px; background:#161616; flex-direction:column; gap:8px; }
+  .main-nav.open { display:flex; }
+  .main-nav a { padding:18px 20px; border:1px solid transparent; text-align:right; }
+  .main-nav a.active { border-color:#8b450e; background:#321d0f; color:#f97316; }
+  .main-nav a:not(.active):hover { background:#1d1d1d; }
+  .header-actions { gap:7px; }
+  .icon-button,.reading-link { display:none; }
+  .mobile-toggle { display:grid; }
+  .mobile-reading-link { display:flex; align-items:center; justify-content:center; height:64px; margin-top:16px; border-radius:999px; background:#f97316; color:#fff; font-size:18px; font-weight:700; }
+}
+
+.site-header .main-nav a.mobile-reading-link { background:#f97316; color:#fff; }
+.site-header .main-nav a.mobile-reading-link:hover { background:#df5f0d; color:#fff; transform:translateY(-3px); }
